@@ -1,0 +1,50 @@
+/* Image styleing */
+
+.milkyWay {
+    width: fit-content;
+    height: fit-content;
+}
+
+div.jumbotron {
+    background-size: cover;
+    height: 30vh;
+    margin: 10px;
+}
+
+#space {
+    height: 40vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+h1.space_text {
+    text-align: center;
+    color: white;
+}
+
+
+/* div.info {
+    width: 300px;
+    height: 150px;
+    word-wrap: break-word;
+    margin-top: 25px;
+    padding-left: 60px;
+    padding-top: 30px;
+} */
+
+
+/* .spacing {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+} */
+
+div.page {
+    margin-left: 200px;
+    margin-right: 150px;
+}
