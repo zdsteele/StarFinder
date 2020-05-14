@@ -20,15 +20,21 @@ d3.json("/data", function(data) {
         x: x_axis,
         y: y_axis,
         type: 'bar',
-        text: y_axis
+        text: y_axis,
+        marker: { color: 'yellowgreen' }
     }];
 
     var layout = {
-        title: `Classes found in Sloan Sky Survey`,
-        xaxis: { title: "Date(MM/DD)" },
-        yaxis: { title: "Amount in Survey" },
+        title: {
+            text: `Classes found in Sloan Sky Survey`,
+            font: { color: '#7FFF00' }
+        },
+        yaxis: { color: '#7FFF00', title: "Amount in Survey" },
+        xaxis: { color: '#7FFF00' },
         height: 500,
-        width: 500
+        width: 500,
+        plot_bgcolor: "#000000",
+        paper_bgcolor: "#343a40"
 
     };
 
@@ -52,13 +58,20 @@ d3.json("/redshift", function(data) {
         y: y_red_axis,
         type: 'bar',
         text: y_red_axis,
-        marker: { color: 'red' }
+        marker: { color: 'yellowgreen' }
     }]
 
     var redLayout = {
-        title: 'Mean Redshift Values per Class',
+        title: {
+            text: 'Mean Redshift Values per Class',
+            font: { color: '#7FFF00' }
+        },
+        yaxis: { color: '#7FFF00', title: 'Mean Redshift' },
+        xaxis: { color: '#7FFF00' },
         height: 500,
-        width: 500
+        width: 500,
+        plot_bgcolor: "#000000",
+        paper_bgcolor: "#343a40"
 
     };
 

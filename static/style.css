@@ -18,12 +18,25 @@ div.jumbotron {
 }
 
 body {
-    background-color: lightblue;
+    background-color: black;
 }
 
 h1.space_text {
     text-align: center;
     color: white;
+}
+
+.green-color {
+    color: greenyellow;
+}
+
+
+/* #redshift {
+    background-color: lightblue;
+} */
+
+hr {
+    color: black;
 }
 
 
