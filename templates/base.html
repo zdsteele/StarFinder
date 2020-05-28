@@ -11,15 +11,22 @@
 <!-- D3 cdn -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 {% endblock %} {% block navbar %}
-<nav>
-    <div id="space" class="container-fluid">
 
-        <div class="jumbotron" style="background-image: url({{url_for('static', filename='milkyway_crop.jpg')}})">
-            <h1 class="space_text">Machine Learning Classification Report on Sloan Digital Sky Survey</h1>
-        </div>
-
+<div id="space" class="container-fluid">
+    <div class="jumbotron" style="background-image: url({{url_for('static', filename='milkyway_crop.jpg')}})">
+        <!-- <h1 style="margin: 100;" class="space_text">Machine Learning Classification Report on Sloan Digital Sky Survey</h1> -->
     </div>
-</nav>
+</div>
+<header class="masthead mb-auto text-center">
+    <div class="inner">
+        <h3 class="masthead-brand green-color">Using Machine Learning to Predict Astronomical Objects</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link" href="/index">Data Analysis</a>
+            <a class="nav-link" href="/astro">Learn About the Data</a>
+        </nav>
+    </div>
+</header>
 {% endblock %} {% block content %}
 <div class="container-fluid">
     {% block page_content %} {% endblock %}

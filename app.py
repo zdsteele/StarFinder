@@ -10,7 +10,7 @@ moment = Moment(app)
 
 df = pd.read_csv('mean.csv')
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/index", methods=['GET', 'POST'])
 def index():
     
     df = pd.read_csv('mean.csv')
@@ -33,6 +33,11 @@ def average_table_data():
 def astro():
 
     return render_template('astronomy.html')
+
+@app.route("/")
+def cover():
+
+    return render_template('Cover.html')
 
 @app.route("/data")
 def get_data():

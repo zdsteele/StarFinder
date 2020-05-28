@@ -79,10 +79,10 @@ d3.json("/redshift", function(data) {
 
 });
 
-// d3.csv("static/csv/mean.csv", function(data) {});
 
+// Creates a table of the Means 
 var tabulate = function(data, columns) {
-    var table = d3.select('#data_table').append('table').style("margin", "auto")
+    var table = d3.select('#data_table').append('table').style("width", "100%")
     var thead = table.append('thead').attr("class", "text-primary")
     var tbody = table.append('tbody')
 
