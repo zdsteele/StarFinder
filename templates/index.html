@@ -101,10 +101,19 @@
     </div>
     <div class="row">
         <div class="col"></div>
-        <div id="result" class="col">
-            <h2>It appears that redshift is a significant factor in predicting class...more to come</h2>
+        <div class="col">
+            <h1>Exploring the data.</h1>
         </div>
         <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <img src="{{url_for('static', filename='scatter_matrix_plot.png')}}" width="1000" height="800"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <!-- <div class="col" id='cor-1'></div> -->
     </div>
 </div>
 {% endblock %} {% block scripts %}

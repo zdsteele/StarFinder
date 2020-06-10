@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Classification{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block page_content %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+
+            <h2 class='green-color'>Select correlation data to view</h2>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+                <option value='dataset1'>r vs z</option>
+                <option value='dataset2'>ra vs dec</option>
+                <option value='dataset3'>z vs redshift</option>
+            </select>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div id="graphs"></div>
+</div>
+{% endblock %} {% block scripts %}
+<script type="text/javascript" src="/static/js/functions.js"></script>
+<script type="text/javascript" src="/static/js/explore.js"></script>
+{% endblock %}

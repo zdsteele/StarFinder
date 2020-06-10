@@ -79,6 +79,44 @@ d3.json("/redshift", function(data) {
 
 });
 
+d3.json("/corr_data", function(data) {
+    console.log(data)
+
+    x_cor_axis = []
+    y_cor_axis = []
+
+    data.forEach(element => {
+        x_cor_axis.push(element.r)
+        y_cor_axis.push(element.z)
+    })
+
+    var corTrace = [{
+        x: x_cor_axis,
+        y: y_cor_axis,
+        type: 'scatter',
+        mode: 'markers',
+        text: y_cor_axis,
+        marker: { color: 'yellowgreen' }
+    }]
+
+    var corrLayout = {
+        title: {
+            text: 'Nah',
+            font: { color: '#7FFF00' }
+        },
+        yaxis: { color: '#7FFF00', title: 'Nah' },
+        xaxis: { color: '#7FFF00' },
+        height: 1000,
+        width: 1000,
+        plot_bgcolor: "#000000",
+        paper_bgcolor: "#343a40"
+
+    };
+
+    Plotly.newPlot("cor-1", corTrace, corrLayout, { responsive: true })
+
+});
+
 
 // Creates a table of the Means 
 var tabulate = function(data, columns) {
