@@ -1,10 +1,32 @@
 {% extends "base.html" %} {% block title %}Classification{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block page_content %}
-<h1 style="text-align: center;" class="green-color">Machine Learning Model</h1>
+<h1 style="text-align: center;" class="green-color">Models used in for this project</h1>
 <div class="container">
     <div class="row green-color">
         <div class="col">
-            <p>For this data set a supervised Machine learning model was used.
-            </p>
+            <p>This purpose of this machine learning excersie is to correctly <strong>classify</strong> astronomical objects as either Stars, Galaxies or Quasars. To accomplish this task I trained several classification Machine Learning models including
+                scalar vector machine, stochastic gradient descent, and RandomForrest.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h3>Model #1</h3>
+            <h4><a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a></h4>
+            <div id='sgd_conf'></div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Model #2
+                <h4><a href="https://en.wikipedia.org/wiki/Support_vector_machine">Scalar Vector Machine</a></h4>
+                <h3>Model #3</h3>
+                <h4><a href="https://en.wikipedia.org/wiki/Random_forest">RandomForrest</a></h4>
         </div>
     </div>
 </div>
