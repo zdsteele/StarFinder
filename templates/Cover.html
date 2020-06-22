@@ -9,15 +9,18 @@
             <div class="container-fluid white-color">
                 <div class="row">
                     <div class="col">
-                        <img src="{{url_for('static', filename='Regulus-Espenak.jpg')}}" />
+                        <a href="#" title="Stars" data-toggle="popover" data-trigger="hover" data-content="Stars emit heat and light via nuclear fusion">
+                            <img src="{{url_for('static', filename='Regulus-Espenak.jpg')}}" /></a>
                         <p>Stars</p>
                     </div>
                     <div class="col">
-                        <img src="{{url_for('static', filename='Galaxy.jpg')}}" />
+                        <a href="#" title="Galaxy" data-toggle="popover" data-trigger="hover" data-content="Galaxies are large collection of stars.">
+                            <img src="{{url_for('static', filename='Galaxy.jpg')}}" /></a>
                         <p>Galaxies</p>
                     </div>
                     <div class="col">
-                        <img src="{{url_for('static', filename='Quasar.jpg')}}" />
+                        <a href="#" title="Quasars" data-toggle="popover" data-trigger="hover" data-content="Quasars are very far away and bright objects.">
+                            <img src="{{url_for('static', filename='Quasar.jpg')}}" /></a>
                         <p>Quasars</p>
                     </div>
                 </div>
@@ -38,4 +41,10 @@
 </body>
 
 
-{% endblock %} {% block scripts %} {% endblock %}
+{% endblock %} {% block scripts %}
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+{% endblock %}
