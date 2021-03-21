@@ -1,43 +1,38 @@
 {% extends "base.html" %} {% block title %}Classification{% endblock %} {% block head %} {{ super() }}
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> {% endblock %} {% block page_content %}
 
-<body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<body>
+    <div class="cover-container d-flex p-3 mx-auto flex-column">
         <main role="main" class="inner cover">
-            <!-- <h1 class="cover-heading">Welcome To Astronomical Classification Using Machine Learning!</h1> -->
-
             <div class="container-fluid white-color">
                 <div class="row">
-                    <div class="col">
+                    <div id='Star' class="col" onclick="showStar();return false;">
                         <a href="#" title="Stars" data-toggle="popover" data-trigger="hover" data-content="Stars emit heat and light via nuclear fusion">
                             <img src="{{url_for('static', filename='Regulus-Espenak.jpg')}}" /></a>
                         <p>Stars</p>
                     </div>
-                    <div class="col">
+                    <div id="Galaxy" class="col" onclick="showGalaxy();return false;">
                         <a href="#" title="Galaxy" data-toggle="popover" data-trigger="hover" data-content="Galaxies are large collection of stars.">
                             <img src="{{url_for('static', filename='Galaxy.jpg')}}" /></a>
                         <p>Galaxies</p>
                     </div>
-                    <div class="col">
+                    <div id="Quasar" class="col" onclick="showQuasar();return false;">
                         <a href="#" title="Quasars" data-toggle="popover" data-trigger="hover" data-content="Quasars are very far away and bright objects.">
                             <img src="{{url_for('static', filename='Quasar.jpg')}}" /></a>
                         <p>Quasars</p>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div id="starinfo" class="col">
+                    </div>
+                </div>
         </main>
-        <br>
-        <br>
-        <br>
-        <!-- <p class="lead">
-            <a href="/index" class="btn btn-lg btn-secondary">Learn more</a>
-        </p> -->
         <footer class="mastfoot mt-auto">
             <div class="inner">
                 <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
         </footer>
-    </div>
+        </div>
 </body>
 
 
@@ -47,4 +42,5 @@
         $('[data-toggle="popover"]').popover();
     });
 </script>
+<script type="text/javascript" src="/static/js/starinfo.js"></script>
 {% endblock %}

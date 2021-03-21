@@ -65,3 +65,12 @@ div.page {
     margin-left: 200px;
     margin-right: 150px;
 }
+
+
+/* div.starinfo {
+    margin-left: 200px;
+} */
+
+#starinfo {
+    text-align: center;
+}

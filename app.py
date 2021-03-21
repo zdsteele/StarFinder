@@ -82,6 +82,11 @@ def explore_data():
 
     return render_template('explore_data.html')
 
+@app.route("/metadata")
+def metadata():
+
+    return render_template('metadata.j2')
+
 @app.route("/redshift")
 def redshift():
     
