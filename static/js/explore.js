@@ -16,6 +16,7 @@ function Scatter_Plot(dataset) {
 
         var axes = everyTenthValue(x_cor_axis, y_cor_axis);
 
+
         var corTrace = [{
             x: axes[0],
             y: axes[1],
@@ -44,9 +45,9 @@ function Scatter_Plot(dataset) {
 };
 
 
-function optionChanged(newCounty) {
+function optionChanged(newDataSet) {
     // Fetch new data each time a new sample is selected
-    Scatter_Plot(newCounty);
+    Scatter_Plot(newDataSet);
 
 }
 

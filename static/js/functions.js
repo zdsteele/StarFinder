@@ -1,5 +1,8 @@
 // Using this function to cut down on the amount the plotly graphs 
 // Are trying to plot. 
+
+
+
 // Making smaller x and y axese
 function everyTenthValue(array_x, array_y) {
     sliced_x = []

@@ -12,7 +12,6 @@ div.jumbotron {
 }
 
 #space {
-    height: 40vh;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -27,7 +26,7 @@ h1.space_text {
 }
 
 .green-color {
-    color: greenyellow;
+    color: rgb(175, 133, 253);
 }
 
 .white-color {
@@ -72,5 +71,13 @@ div.page {
 } */
 
 #starinfo {
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
     text-align: center;
 }

@@ -11,6 +11,8 @@ moment = Moment(app)
 
 df = pd.read_csv('Skyserver_2019.csv')
 mean_df = pd.read_csv('mean.csv')
+forrest_confusion_df = pd.read_csv('forrest_confusion.csv')
+sgd_confusion = pd.read_csv('sgd_confusion.csv')
 
 
 @app.route("/index", methods=['GET', 'POST'])
@@ -22,10 +24,6 @@ def index():
     return render_template('index.html', tables=[df_reduced.to_html()], 
                                 titles=df_reduced.columns.values)
 
-@app.route("/astro")
-def astro():
-
-    return render_template('astronomy.html')
 
 @app.route("/model")
 def model():
@@ -40,7 +38,6 @@ def cover():
 @app.route("/data")
 def get_data():
 
-    
     count_dict = dict(df["class"].value_counts())
     cats = list(count_dict.keys())
     cats = list(map(lambda x: x.lower().capitalize(), cats))
@@ -48,6 +45,17 @@ def get_data():
     data = [{"Class":cats[0],"Counts":int(counts[0])},{"Class":cats[1],
                     "Counts":int(counts[1])},{"Class":cats[2],"Counts":int(counts[2])}]
     return jsonify(data)
+
+@app.route("/forrest_heat")
+def forrest():
+    data = json.dumps(json.loads(forrest_confusion_df.to_json(orient='records')))
+    return data
+
+@app.route("/sgd")
+def sgd():
+    data = json.dumps(json.loads(forrest_confusion_df.to_json(orient='records')))
+    return data
+
 
 @app.route("/corr_data")
 def cor_data():
@@ -85,7 +93,11 @@ def explore_data():
 @app.route("/metadata")
 def metadata():
 
-    return render_template('metadata.j2')
+    test = 'Hey!!'
+    test_list = ['a','b','c']
+
+    return render_template('metadata.j2', test=test, test_list = test_list
+    )
 
 @app.route("/redshift")
 def redshift():
