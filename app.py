@@ -13,6 +13,7 @@ df = pd.read_csv('Skyserver_2019.csv')
 mean_df = pd.read_csv('mean.csv')
 forrest_confusion_df = pd.read_csv('forrest_confusion.csv')
 sgd_confusion = pd.read_csv('sgd_confusion.csv')
+svm_confusion = pd.read_csv('svm_cm.csv')
 
 
 @app.route("/index", methods=['GET', 'POST'])
@@ -53,7 +54,12 @@ def forrest():
 
 @app.route("/sgd")
 def sgd():
-    data = json.dumps(json.loads(forrest_confusion_df.to_json(orient='records')))
+    data = json.dumps(json.loads(sgd_confusion.to_json(orient='records')))
+    return data
+
+@app.route("/svm")
+def svm():
+    data = json.dumps(json.loads(svm_confusion.to_json(orient='records')))
     return data
 
 

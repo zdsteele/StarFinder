@@ -17,8 +17,7 @@
         <div class="col-6 green-color">
             <h3>Model #1 - Stochastic Gradient Descent</h3>
             <button type="button" class="btn btn-info" onclick="createSGD()">Show Confusion Matrix on Training Data for SGD model.</button>
-            <div id='sgd_conf'>Heres the sgd graph
-                <h3>test</h3>
+            <div id='sgd_conf' style="display: none;">Heres the sgd graph
             </div>
         </div>
         <div class="col-3"></div>
@@ -28,12 +27,24 @@
         <div class="col-6 green-color">
             <h3>Model #2 - Support Vector Machine.</h3>
             <button type="button" class="btn btn-info" onclick="createSVM()">Show Confusion Matrix on Training Data for SVM</button>
-            <div id='svm-conf'>Here the svm graph
-                <h3>test</h3>
+            <div id='svm-conf' style="display: none;">Here the svm graph
             </div>
         </div>
         <div class="col-3"></div>
     </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 green-color">
+            <h3>Model #2 - Random Forrest.</h3>
+            <button type="button" class="btn btn-info" onclick="createForrest()">Show Confusion Matrix on Training Data for SVM</button>
+            <div id='rf-conf' style="display: none;">Here the random forrest graph
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+
+
 </div>
 {% endblock %} {% block scripts %}
 <script type="text/javascript" src="/static/js/model.js"></script>

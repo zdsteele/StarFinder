@@ -80,7 +80,7 @@ d3.json("/redshift", function(data) {
 });
 
 d3.json("/corr_data", function(data) {
-    console.log(data)
+
 
     x_cor_axis = []
     y_cor_axis = []
